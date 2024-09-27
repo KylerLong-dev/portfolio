@@ -13,11 +13,43 @@ body {
 
 .background-container {
     background: linear-gradient(to bottom, #001f3f, #1a5678);
-    background-attachment: fixed; 
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    color: #fff; 
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
 }
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: twinkling 5s infinite ease-in-out;
+}
+
+.star:nth-child(2) {
+    animation-duration: 6s;
+}
+.star:nth-child(3) {
+    animation-duration: 7s;
+}
+
+
 
 /* Header (Navigation Bar) Styling */
 header {
@@ -57,9 +89,6 @@ header {
 
 /* Hero Section Styling */
 .hero {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
