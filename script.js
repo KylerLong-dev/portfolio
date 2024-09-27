@@ -23,3 +23,21 @@ function generateStars() {
 // Call the function to generate stars on page load
 generateStars();
 
+window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollToTopButton.style.display = 'flex'; // Show as flex to ensure centering
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+document.getElementById('scrollToTop').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
