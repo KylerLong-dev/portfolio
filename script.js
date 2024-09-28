@@ -1,12 +1,13 @@
 function generateStars() {
     const starContainer = document.querySelector('.stars');
-    const numberOfStars = 100; // You can adjust this number for more or fewer stars
+    const numberOfStars = 100; // Adjust this number for more or fewer stars
 
     for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
 
-        const size = Math.random() * 2 + 1 + 'px'; // Stars will be between 1px and 3px
+        // Set fixed size for stars
+        const size = '2px'; // Fixed size for consistency
         const posX = Math.random() * 100 + '%'; // Random horizontal position
         const posY = Math.random() * 100 + '%'; // Random vertical position
 
@@ -22,6 +23,35 @@ function generateStars() {
 
 // Call the function to generate stars on page load
 generateStars();
+
+const services = document.querySelectorAll('.service');
+
+services.forEach(service => {
+    service.addEventListener('mouseenter', () => {
+        // Create stars
+        for (let i = 0; i < 30; i++) { // Increase the number of stars
+            const star = document.createElement('div');
+            star.classList.add('star');
+            // Set fixed size for the stars
+            star.style.width = '2px'; // Fixed size
+            star.style.height = '2px'; // Fixed size
+            // Set random positions for stars within the service card
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            service.appendChild(star);
+        }
+    });
+
+    service.addEventListener('mouseleave', () => {
+        // Remove stars on mouse leave
+        const stars = service.querySelectorAll('.star');
+        stars.forEach(star => star.remove());
+    });
+});
+
+
+
+
 
 window.addEventListener('scroll', function() {
     const scrollToTopButton = document.getElementById('scrollToTop');
