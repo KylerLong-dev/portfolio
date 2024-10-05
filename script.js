@@ -70,4 +70,17 @@ document.getElementById('scrollToTop').addEventListener('click', function(e) {
     });
 });
 
+let currentIndex = 0;
+
+function showNext() {
+    const items = document.querySelectorAll('.carousel-item');
+    currentIndex = (currentIndex + 1) % items.length; // Loop back to the first item
+    const offset = -currentIndex * (items[0].offsetWidth + 20); // Calculate offset
+    document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
+}
+
+// Automatically change items every 2 seconds
+setInterval(showNext, 2000);
+
+
 

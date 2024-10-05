@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 18px;
 }
 
 body {
@@ -32,14 +33,6 @@ body {
     100% {
         opacity: 0.2;
     }
-}
-
-.star {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    opacity: 0.2;
-    animation: twinkling 5s infinite ease-in-out;
 }
 
 .star:nth-child(2) {
@@ -147,21 +140,23 @@ h2 {
 }
 
 .about_text {
-    text-align: left;
-    background-color: rgba(85, 85, 85, .05);
+    text-align: left;;
     padding: 20px;
-    border-radius: 5px;
+    max-width: 1000px;
+}
+
+.about_flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about_flex-container img {
+    width: auto;
+    height: 350px;
+    border-radius: 15px;
     box-shadow: 0 4px 4px rgba(0, 45, 104, 0.5);
 }
-
-.about_grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr;
-    gap: 15px;
-}
-
-
 
 /* Services Section Styling */
 .service {
@@ -176,6 +171,7 @@ h2 {
     transition: opacity 0.3s ease; 
     width: 2px;  
     height: 2px; 
+    animation: twinkling 5s infinite ease-in-out;
 }
 
 /* Show stars on hover */
@@ -229,7 +225,7 @@ h2 {
     overflow: hidden;
     position: relative;
     width: 500px;
-    height: 200px;
+    height: 300px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 45, 104, 0.5);
@@ -243,6 +239,7 @@ h2 {
 }
 
 .service-content {
+    text-align: left;
     padding: 15px;
 }
 
@@ -311,6 +308,52 @@ h2 {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 31, 63, 0.7); /* Darker blue on hover, stronger presence */
 }
+
+/*Skills*/
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.skill-label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 50px;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+    min-width: 150px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 50px; /* Adjust the size of the icons */
+    height: 50px;
+    object-fit: contain; /* Keeps the aspect ratio */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
 
 .contact-btn {
     background-color: #333;
