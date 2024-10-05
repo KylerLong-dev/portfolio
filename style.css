@@ -261,7 +261,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 75px;
 }
 
 .project-img {
@@ -325,7 +325,7 @@ h2 {
 
 .carousel {
     display: flex;
-    gap: 50px;
+    gap: 15px;
     animation: scroll 20s linear infinite;
 }
 

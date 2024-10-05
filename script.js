@@ -50,13 +50,10 @@ services.forEach(service => {
 });
 
 
-
-
-
 window.addEventListener('scroll', function() {
     const scrollToTopButton = document.getElementById('scrollToTop');
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollToTopButton.style.display = 'flex'; // Show as flex to ensure centering
+        scrollToTopButton.style.display = 'flex'; 
     } else {
         scrollToTopButton.style.display = 'none';
     }
@@ -74,8 +71,8 @@ let currentIndex = 0;
 
 function showNext() {
     const items = document.querySelectorAll('.carousel-item');
-    currentIndex = (currentIndex + 1) % items.length; // Loop back to the first item
-    const offset = -currentIndex * (items[0].offsetWidth + 20); // Calculate offset
+    currentIndex = (currentIndex + 1) % items.length; 
+    const offset = -currentIndex * (items[0].offsetWidth + 20); 
     document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
 }
 
