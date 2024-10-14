@@ -450,7 +450,65 @@ footer {
     padding: 20px 0;
 }
 
-/* media queries */
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 20px 10px;
+    }
+
+    .contact_left-col,
+    .contact_right-col {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        font-size: 0.9rem; /* Make input text slightly smaller */
+    }
+
+    .form-group {
+        grid-template-columns: 1fr; /* Ensure full-width inputs */
+    }
+
+    .wrap {
+        gap: 10px; /* Tighten the gap between form elements */
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scroll-to-top {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* For very small devices (less than 360px) */
+@media (max-width: 360px) {
+    /* Further adjustments for ultra small screens */
+    #contact {
+        padding: 10px;
+    }
+
+    .wrap {
+        gap: 8px; /* Even smaller gap between elements */
+    }
+
+    input,
+    textarea {
+        padding: 8px; /* Smaller padding for ultra small screens */
+        font-size: 0.85rem; /* Adjust text size */
+    }
+
+    .scroll-to-top {
+        width: 30px;
+        height: 30px;
+    }
+}
 /* For small devices (phones) */
 @media (max-width: 768px) {
     body {
@@ -560,43 +618,36 @@ footer {
         height: 400px;
     }
 
-    #contact {
-        grid-template-columns: 1fr; /* Stack the form into one column */
-        padding: 30px 10px;
+    .service {
+        width: 45%;
+        height: 270px;
     }
 
-    .contact_left-col,
-    .contact_right-col {
-        width: 100%; /* Make columns full width */
-        padding: 0;
+    .services-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    .wrap {
-        gap: 15px; /* Add some space between form elements */
+    .cards-container {
+        gap: 50px;
+    }
+
+    .contact_left-col, .contact_right-col {
+        width: 100%;
     }
 
     .form-group {
-        grid-template-columns: 1fr; /* Ensure inputs take full width */
-    }
-
-    input,
-    textarea {
-        width: 100%; /* Ensure inputs stretch to full width */
-        padding: 12px;
-        font-size: 1rem; /* Slightly larger text for smaller screens */
+        grid-template-columns: 1fr 1fr;
     }
 
     textarea {
-        height: auto; /* Allow textarea to shrink or expand based on content */
-    }
-
-    label {
-        font-size: 1rem; /* Adjust label size for readability */
+        height: 220px;
     }
 
     .scroll-to-top {
-        width: 40px;
-        height: 40px;
+        font-size: 22px;
+        width: 45px;
+        height: 45px;
     }
 }
 
