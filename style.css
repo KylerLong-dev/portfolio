@@ -344,6 +344,9 @@ h2 {
 /*Contact Section*/
 #contact {
     display: flex;
+    justify-content: center;
+    gap: 75px;
+    padding: 60px 20px;
 }
 
 .contact_left-col {
@@ -354,12 +357,77 @@ h2 {
 }
 
 .wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
+    text-align: left;
+
 }
 
+.contact_right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 75px;
+}
+
+input {
+    font-size: 14px;
+    padding: 10px;
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border: 1px solid  #1a5678;
+    box-shadow: 0 2px 5px  #1a5678;
+    outline: none;
+}
+
+textarea {
+    font-size: 14px;
+    padding: 10px;
+    width: 475px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s, box-shadow 0.3s;  
+}
+
+label {
+    text-align: left;
+}
+
+.cont-btn {
+    align-self: flex-start;
+    padding: 12px 26px;
+    cursor: pointer;
+    font-size: 1em;
+    background: linear-gradient(to bottom, #001f3f, #1a5678);
+    border: none;
+    color: rgb(253, 253, 253);
+    border-radius: 50vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-size: 100% 200%; 
+    background-position: top; 
+    transition: background-position 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.cont-btn:hover {
+    background-position: bottom; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
 
 /*Scroll Arrow*/
 

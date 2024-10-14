@@ -156,28 +156,33 @@
         <div class="contact_left-col">
           <h2>Have a Project in Mind?</h2>
           <div class="wrap">
-            <p>Use the form to give me as much detail as possible and I'll get
-              back to you as soon as I can.</p>
-            <p>Alternatively, get in touch using the information below.</p>
+            <p>Use the form to give me as much detail as possible and I'll get back to you as soon as I can.</p><br>
+            <p>Alternatively, get in touch using the information below.</p><br>
             <a href="mailto:kylerlong.dev@gmail.com">kylerlong.dev@gmail.com</a>
           </div>
         </div>
 
         <form class="contact_right-col" id="contact-form" action="#" method="post">
-            <div class="form-group text-group">
-              <label for="first_name">First Name</label>
-              <input type="text" id="first_name" name="first_name" placeholder="John Doe">
+            <div class="form-row">
+              <div class="form-col">
+                <label for="first_name">Your Name</label>
+                <input type="text" id="first_name" name="first_name" placeholder="John Doe" required>
+              </div>
+              <div class="form-col">
+                <label for="user_email">Your Email Address</label>
+                <input type="email" id="user_email" name="email" placeholder="johndoe123@domain.com" required>
+              </div>
             </div>
-            <div class="form-group text-group">
-              <label for="user_email">Your Email Address</label>
-              <input type="email" id="user_email" name="email" placeholder="johndoe123@domain.com">
+            <div class="form-row">
+              <div class="form-col">
+                <label for="project_details">Project Details</label>
+                <textarea id="project_details" placeholder="" required></textarea>
+              </div>
             </div>
-            <div class="form-group full-width">
-              <label for="project_details">Project Details</label>
-              <textarea id="project_details" placeholder=""></textarea>
-            </div>
-            <div class="submit-button">
-              <button type="submit" form="contact-form">Let's do this <i class="fas fa-paper-plane"></i></button>
+            <div class="form-row">
+              <div class="form-col">
+                <button type="submit" form="contact-form" class="cont-btn">Let's do this &nbsp<i class="fas fa-paper-plane"></i></button>
+              </div>
             </div>
           </form>
     </section>
