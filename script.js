@@ -83,6 +83,11 @@ document.querySelector('textarea').placeholder = "Hello,\n\n" +
 "I would like to create a mobile responsive website for my business. Can you help?\n\n" +
 "Thanks!";
 
+function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('active');
+}
+
 
 
 
