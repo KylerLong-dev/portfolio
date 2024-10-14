@@ -358,7 +358,16 @@ h2 {
 
 .wrap {
     text-align: left;
+}
 
+.email-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1a5678;
+}
+
+.email-link:hover {
+    text-decoration: underline;
 }
 
 .contact_right-col {
@@ -374,13 +383,13 @@ h2 {
 
 .form-row {
     display: flex;
-    gap: 75px;
+    gap: 25px;
 }
 
 input {
     font-size: 14px;
     padding: 10px;
-    width: 200px;
+    width: 225px;
     height: 30px;
     border: 1px solid black;
     border-radius: 4px;
@@ -410,6 +419,7 @@ label {
 }
 
 .cont-btn {
+    width: 475px;
     align-self: flex-start;
     padding: 12px 26px;
     cursor: pointer;
