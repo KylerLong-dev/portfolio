@@ -16,7 +16,7 @@ body {
 }
 
 /*Divider*/
-.divider-shadow-right {
+.divider-right {
     width: 100%;
     height: 25px;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
@@ -24,7 +24,7 @@ body {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 50%);
 }
 
-.divider-shadow-left {
+.divider-left {
     width: 100%;
     height: 25px;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
@@ -74,7 +74,7 @@ body {
 .social-icon {
     text-decoration: none;
     font-size: 24px;
-    color: #333;
+    color: whitesmoke;
     transition: color 0.3s ease;
 }
 
@@ -93,7 +93,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: sticky;
+    position: absolute;
     top: 0;
     z-index: 1000; 
     width: 100%;
@@ -134,6 +134,7 @@ header .menu-icon {
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -148,6 +149,7 @@ header .menu-icon {
 .hero-content p {
     font-size: 1.25rem;
     color: #ddd;
+    margin-bottom: 1.25rem;
 }
 
 .cta-btn {
@@ -161,14 +163,19 @@ header .menu-icon {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    margin-top: 20px;
     max-width: 200px;
 }
 
 .cta-btn:hover {
-    background-color: #001f3f;
+    background-color: #1a5678;
     color: #fff;
     cursor: pointer;
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 section {
@@ -200,7 +207,7 @@ h2 {
 
 .about_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 75px;
 }
 
@@ -208,49 +215,37 @@ h2 {
     width: auto;
     height: 500px;
     border-radius: 2px;
-    box-shadow: 12px 12px 0 0 rgba(0, 45, 104, 0.8); /* Increased offset for gap */
+    box-shadow: 12px 12px 0 0 rgba(252, 252, 252, 0.925); /* Increased offset for gap */
 }
 
 
 .social-links {
     display: flex;
-    gap: 12px;
+    gap: 15px;
 }
 
 /* Services Section Styling */
+
+.service-header {
+    display: flex;
+    justify-content: center;
+}
+
 .service {
     position: relative;
 }
 
-#services {
-    padding: 60px 20px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
 }
 
 .services-header h2 {
     font-size: 2.3rem;
     color: whitesmoke;
     margin-top: 20px;
-}
-
-.services-header h3 {
-    font-size: 1.2rem;
-}
-
-.services-header {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-
-.services-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
+    text-align: center;
 }
 
 .service {
@@ -264,6 +259,9 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 45, 104, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px */
+    min-width: 250px; /* Ensures the boxes don't get too small */
+    max-width: 600px; /* Sets a maximum width to avoid overly large cards */
 }
 
 .service:hover {
@@ -300,22 +298,10 @@ h2 {
   /* Timeline container */
   .timeline {
     display: flex;
-    justify-content: space-between; /* Space out the steps */
+    justify-content: space-around; /* Space out the steps */
     align-items: flex-start;
     position: relative;
     z-index: 1; /* Ensure steps are above the timeline line */
-  }
-  
-  .timeline-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ddd;
-    z-index: 0;
   }
   
   /* Individual timeline steps */
@@ -345,29 +331,57 @@ h2 {
 /*projects*/
 .cards-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 75px;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    width: 100%; /* Ensure container takes full width */
+}
+
+/* Project Card Styling */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.4); /* More transparent background */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%; /* Increased to 90% to stretch wider */
+    max-width: 1600px; /* Allow cards to stretch even wider on larger screens */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 45, 104, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 31, 63, 0.5);
 }
 
 .project-img {
-    width: 100%;
-    height: 200px;
+    width: 30%; /* Slightly less image width to give more space for content */
+    height: 100%;
     object-fit: cover;
 }
 
 .project-content {
-    padding: 15px;
+    width: 70%; /* More space for the content */
+    padding: 20px;
+    color: whitesmoke;
 }
 
 .project-content h3 {
     margin-bottom: 10px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    color: #001f3f;
 }
 
 .project-content p {
     margin-bottom: 10px;
     color: whitesmoke;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .project-link {
@@ -378,22 +392,6 @@ h2 {
 
 .project-link:hover {
     text-decoration: underline;
-}
-
-.project-card {
-    background-color: #fff;
-    width: 400px;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 45, 104, 0.5); /* Blue hue at 50% opacity */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 31, 63, 0.7); /* Darker blue on hover, stronger presence */
 }
 
 /*Skills*/
