@@ -546,16 +546,6 @@ footer {
 
 /* For mobile screens */
 
-@media (max-width: 975px) {
-    .cards-container {
-        
-    }
-
-    .project-card {
-        
-    }
-}
-
 @media (max-width: 768px) {
     .about_container {
         flex-direction: column;
