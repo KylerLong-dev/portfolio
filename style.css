@@ -328,7 +328,7 @@ h2 {
     font-size: 1rem;
   }
 
-/*projects*/
+/*Projects*/
 .cards-container {
     display: flex;
     flex-direction: column;
@@ -336,17 +336,16 @@ h2 {
     align-items: center;
     gap: 50px;
     padding: 20px;
-    width: 100%; /* Ensure container takes full width */
+    width: 100%; 
 }
 
-/* Project Card Styling */
 .project-card {
-    background-color: rgba(255, 255, 255, 0.4); /* More transparent background */
+    background-color: rgba(255, 255, 255, 0.142); 
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 90%; /* Increased to 90% to stretch wider */
-    max-width: 1600px; /* Allow cards to stretch even wider on larger screens */
+    width: 90%; 
+    max-width: 1600px; 
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 45, 104, 0.3);
@@ -360,13 +359,13 @@ h2 {
 }
 
 .project-img {
-    width: 30%; /* Slightly less image width to give more space for content */
+    width: 30%; 
     height: 100%;
     object-fit: cover;
 }
 
 .project-content {
-    width: 70%; /* More space for the content */
+    width: 70%; 
     padding: 20px;
     color: whitesmoke;
 }
@@ -374,7 +373,7 @@ h2 {
 .project-content h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
-    color: #001f3f;
+    color: whitesmoke;
 }
 
 .project-content p {
@@ -441,8 +440,7 @@ h2 {
 /*Contact Section*/
 #contact {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 75px;
     padding: 60px 20px;
 }
@@ -461,7 +459,7 @@ h2 {
 .email-link {
     text-decoration: none;
     font-weight: bold;
-    color: #1a5678;
+    color: #d8e9f3;
 }
 
 .email-link:hover {
@@ -540,13 +538,23 @@ label {
 /*Footer*/
 
 footer {
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.142);
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 /* For mobile screens */
+
+@media (max-width: 975px) {
+    .cards-container {
+        
+    }
+
+    .project-card {
+        
+    }
+}
 
 @media (max-width: 768px) {
     .about_container {
@@ -554,17 +562,21 @@ footer {
         align-items: center;
         gap: 30px;
     }
+
     .about_container img {
         width: auto;
         height: 300px;
     }
+
     .about_text {
         text-align: left;
         max-width: 100%;    
     }
+
     .about_text h2, .about_text h4 {
         text-align: center;
     }
+
     .services-container,
     .cards-container {
         flex-direction: column; 
