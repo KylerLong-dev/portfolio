@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.6;
     background: linear-gradient(to bottom, #001f3f, #1a5678);
     color: whitesmoke;
@@ -329,6 +330,12 @@ h2 {
   }
 
 /*Projects*/
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cards-container {
     display: flex;
     flex-direction: column;
@@ -336,16 +343,15 @@ h2 {
     align-items: center;
     gap: 50px;
     padding: 20px;
-    width: 100%; 
+    width: 80%;
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.142); 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%; 
-    max-width: 1600px; 
+    background-color: rgba(255, 255, 255, 0.142);
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: 1 part for the image, 2 parts for the content */
+    width: 90%;
+    max-width: 1600px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 45, 104, 0.3);
@@ -359,13 +365,12 @@ h2 {
 }
 
 .project-img {
-    width: 30%; 
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .project-content {
-    width: 70%; 
     padding: 20px;
     color: whitesmoke;
 }
@@ -520,7 +525,7 @@ label {
     padding: 12px 26px;
     cursor: pointer;
     font-size: 1em;
-    background: linear-gradient(to bottom, #001f3f, #1a5678);
+    background: linear-gradient(to bottom, #001f3f, #57afe2);
     border: none;
     color: rgb(253, 253, 253);
     border-radius: 50vh;
@@ -605,6 +610,21 @@ footer {
         margin-bottom: 40px;
         width: 80%;
       }
+
+      .project-card {
+        grid-template-columns: 1fr; /* Switch to one column: image on top, content below */
+        grid-template-rows: auto auto; /* Two rows for the image and content */
+    }
+
+    .project-img {
+        width: 100%; /* Make sure the image takes full width */
+        height: auto; /* Let the height adjust automatically */
+    }
+
+    .project-content {
+        width: 100%; /* Full width for content */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
 
     #contact {
         flex-direction: column; 
