@@ -151,6 +151,10 @@ header .menu-icon {
     gap: 70px;
 }
 
+.hero-content {
+    max-width: 600px;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     color: #fff;
@@ -560,11 +564,16 @@ footer {
 
 /* For mobile screens */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     header {
         flex-direction: column;
         gap: 20px;
     }
+
+    .carousel {
+        animation: scroll 10s linear infinite;
+    }
+
     .about_container {
         flex-direction: column;
         align-items: center;
@@ -589,6 +598,10 @@ footer {
     .cards-container {
         flex-direction: column; 
         gap: 50px; 
+    }
+
+    .services-container {
+        align-items: center;
     }
 
     .service,
@@ -700,4 +713,7 @@ footer {
         padding: 10px 20px; 
         font-size: 0.9em; 
       }
+      .carousel {
+        animation: scroll 8s linear infinite;
+    }
 }
