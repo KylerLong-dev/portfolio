@@ -39,7 +39,17 @@ document.querySelector('textarea').placeholder = "Hello,\n\n" +
 "I would like to create a mobile responsive website for my business. Can you help?\n\n" +
 "Thanks!";
 
+//Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
 
+hamburger.addEventListener('click', () => {
+    if (nav.style.display === 'flex') {
+        nav.style.display = 'none'; // Hide the menu if it's currently displayed
+    } else {
+        nav.style.display = 'flex'; // Show the menu if it's currently hidden
+    }
+});
 
 
 

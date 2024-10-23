@@ -140,6 +140,22 @@ header .menu-icon {
     text-decoration: underline; 
 }
 
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px; /* Width of each bar */
+    height: 3px; /* Height of each bar */
+    background-color: white; /* Color of the bars */
+    margin: 3px 0; /* Space between the bars */
+    transition: 0.3s; /* Smooth transition */
+}
+
 /* Hero Section Styling */
 .hero {
     height: 100vh;
@@ -566,6 +582,32 @@ footer {
     header {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+
+    .nav {
+        align-items: center;
+        display: none; 
+        flex-direction: column; 
+        width: 100%;
+        background-color: transparent;
+        position: absolute; 
+        top: 170px; 
+        z-index: 999; 
+    }
+
+    .nav.show { 
+        display: flex; 
+    }
+
+    .nav-link {
+        padding: 10px 20px; 
+        font-size: 1.2rem; 
+        text-align: center; 
+        color: white; 
     }
 
     .carousel {
