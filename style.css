@@ -273,9 +273,9 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 45, 104, 0.5);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px */
-    min-width: 250px; /* Ensures the boxes don't get too small */
-    max-width: 600px; /* Sets a maximum width to avoid overly large cards */
+    flex: 1 1 300px; 
+    min-width: 250px; 
+    max-width: 600px;
 }
 
 .service:hover {
@@ -306,23 +306,21 @@ h2 {
 #timeline {
     padding: 50px 20px;
     text-align: center;
-    position: relative;  /* To allow absolute positioning of the line */
+    position: relative;  
   }
   
-  /* Timeline container */
   .timeline {
     display: flex;
-    justify-content: space-around; /* Space out the steps */
+    justify-content: space-around; 
     align-items: flex-start;
     position: relative;
-    z-index: 1; /* Ensure steps are above the timeline line */
+    z-index: 1; 
   }
   
-  /* Individual timeline steps */
   .timeline-step {
     position: relative;
     text-align: center;
-    width: 20%; /* Adjust to ensure each step is a fixed width */
+    width: 20%; 
     padding: 20px;
   }
   
@@ -362,7 +360,7 @@ h2 {
 .project-card {
     background-color: rgba(255, 255, 255, 0.142);
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Two columns: 1 part for the image, 2 parts for the content */
+    grid-template-columns: 1fr 2fr; 
     width: 90%;
     max-width: 1600px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -441,9 +439,9 @@ h2 {
 }
 
 .carousel-item img {
-    width: 50px; /* Adjust the size of the icons */
+    width: 50px; 
     height: 50px;
-    object-fit: contain; /* Keeps the aspect ratio */
+    object-fit: contain; 
 }
 
 @keyframes scroll {
@@ -697,23 +695,29 @@ footer {
         gap: 40px; 
       }
     
-      .form-row {
+    .form-row {
         gap: 10px; 
       }
     
-      textarea {
+    textarea {
         height: 150px; 
       }
     
-      input {
+    input {
         width: 100%; 
       }
     
-      .cont-btn {
+    .cont-btn {
         padding: 10px 20px; 
         font-size: 0.9em; 
       }
-      .carousel {
+    .carousel {
+        gap: 50px;
         animation: scroll 8s linear infinite;
     }
+    .carousel-item {
+        min-width: 20px;
+    }
+
+
 }
