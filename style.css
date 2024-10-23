@@ -100,11 +100,20 @@ header {
     width: 100%;
 }
 
-.logo a {
-    font-size: 1.5rem;
+.exo-2-logo {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    z-index: 1001;
+  }
+
+.exo-2-logo a {
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: inherit;
+    z-index: 1001;
 }
 
 /* Navigation Menu Styling */
@@ -552,6 +561,10 @@ footer {
 /* For mobile screens */
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
     .about_container {
         flex-direction: column;
         align-items: center;
