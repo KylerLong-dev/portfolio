@@ -592,11 +592,13 @@ footer {
         align-items: center;
         display: none; 
         flex-direction: column; 
+        gap: 50px;
         width: 100%;
-        background-color: transparent;
+        background-color: whitesmoke;
         position: absolute; 
         top: 170px; 
-        z-index: 999; 
+        z-index: 1002; 
+        padding: 15px 0;
     }
 
     .nav.show { 
@@ -607,7 +609,7 @@ footer {
         padding: 10px 20px; 
         font-size: 1.2rem; 
         text-align: center; 
-        color: white; 
+        color:#001f3f; 
     }
 
     .carousel {
