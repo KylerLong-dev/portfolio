@@ -158,7 +158,7 @@ header .menu-icon {
 
 /* Hero Section Styling */
 .hero {
-    height: 100vh;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -588,6 +588,10 @@ footer {
         display: flex; 
     }
 
+    .hero {
+        height: 32rem;
+    }
+
     .nav {
         align-items: center;
         display: none; 
@@ -732,6 +736,10 @@ footer {
 
 /* For very small mobile screens */
 @media (max-width: 480px) {
+    .hero {
+        height: 42rem;
+    }
+
     .about_container img {
         width: auto;
         height: 300px;
